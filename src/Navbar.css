@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+}
+
+.navbar {
+  overflow: hidden;
+  padding: 10px 5px;
+  /* z-index: 100; */
+}
+
+a {
+  color: whitesmoke;
+  padding: 1vw;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  float: left;
+  text-align: center;
+  font-size: 25px;
+  font-weight: lighter;
+}
+
+.navbar__left a {
+  color: whitesmoke;
+  margin-left: 2vw;
+}
+
+.navbar__content a {
+  float: right;
+  font-size: 18px;
+}
+
+.navbar__content a:hover {
+  font-weight: bold;
+}

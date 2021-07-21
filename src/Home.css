@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+}
+
+:root {
+  --main: #97afa3;
+  --qualifications: #40916c;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 10px 0;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 32px;
+}
+
+.hobbies_title {
+  margin: 0 0 10px 0;
+  align-items: center;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 32px;
+}
+
+.line_title {
+  height: 3.5px;
+  width: 45%;
+  background: var(--main);
+  margin: 0 auto;
+}
+
+.line__aboutme {
+  height: 3.5px;
+  width: 25%;
+  background: #a98467;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.line__interest {
+  height: 3.5px;
+  width: 40%;
+  background: #4c956c;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.line__skills {
+  height: 3.5px;
+  width: 25%;
+  background: #3d405b;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.line__education {
+  height: 3.5px;
+  width: 25%;
+  background: #99582a;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.name {
+  font-size: 2.5em;
+  font-weight: bold;
+  letter-spacing: 0.07em;
+  margin-bottom: 11px;
+}
+
+.description {
+  font-size: 1.5em;
+  margin-top: 8px;
+  font-weight: lighter;
+}
+
+.body {
+  background-color: #f7ebe8;
+  max-width: 100%;
+}
+
+.header {
+  background: url(images/background-hi1.jpg) top;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 0;
+  text-align: center;
+  min-height: 100vh;
+  color: whitesmoke;
+  font-family: "DrawnBody";
+  font-size: 20px;
+  align-items: center;
+}
+
+.mypic {
+  max-width: 300px;
+  margin-top: 13vh;
+}
+
+.header button {
+  margin-top: 20px;
+  font-size: 15px;
+  padding: 10px 20px;
+  background: none;
+  color: white;
+  font-weight: bold;
+  border: 3px solid var(--main);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.header button:hover {
+  background: var(--main);
+  color: #3d405b;
+}
+
+.qualifications {
+  padding: 8vh 2vh 8vh 2vh;
+  font-family: Times;
+  font-weight: lighter;
+  background: #e5e5e5;
+  color: #333;
+  padding: 10vh 3vh 10vh 3vh;
+}
+
+.qualifications__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.qualifications ul {
+  margin: 0 4vw;
+  flex: 1;
+  width: 200px;
+  padding: 10px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+ul h1 {
+  margin: 0 auto;
+  color: #333533;
+  align-items: center;
+  margin-bottom: 20px;
+  font-weight: lighter;
+}
+
+.qualifications li {
+  justify-content: center;
+  margin-left: 5px;
+  font-size: 20px;
+}
+
+.qual__titles {
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: lighter;
+  font-size: 19px;
+}
+
+.aboutMe {
+  padding: 10vh 2vh 10vh 2vh;
+  background: white;
+}
+
+.about__content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10vw 0 10vw;
+}
+
+.hobbies {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10vw 0 10vw;
+}
+
+.intro h2 {
+  font-size: 17px;
+  font-weight: lighter;
+  font-family: sans-serif;
+  line-height: 26px;
+  text-align: center;
+}
+
+.hobbies h2 {
+  font-size: 17px;
+  font-weight: lighter;
+  font-family: sans-serif;
+  line-height: 26px;
+  text-align: center;
+}
+
+.hobbies a {
+  color: #afa397;
+}
+
+.hobbies a:hover {
+  text-decoration: underline;
+}
+
+.icons {
+  width: 32px;
+  height: 32px;
+  margin: 20px 0px 0px 0;
+}
+
+.links {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.links :hover {
+  opacity: 0.8;
+}
+
+.education {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: lighter;
+  background: white;
+  font-size: 18px;
+  color: #333;
+  padding: 10vh 3vh 10vh 3vh;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.education__content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 2vh 0 2vh 0;
+}
+
+.courses {
+  display: flex;
+  text-align: start;
+  font-size: 15px;
+  font-weight: lighter;
+  font-family: sans-serif;
+  line-height: 24px;
+}
+
+.education__sidebar {
+  width: 40vw;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 650px) {
+  .education__sidebar {
+  }
+}
