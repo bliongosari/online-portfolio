@@ -1,14 +1,20 @@
+import React, { useEffect, useState } from "react";
 import "./Home.css";
 import profilePicture from "./images/background.png";
-import facebook from "./images/facebook.png";
-import instagram from "./images/instagram.png";
 import github from "./images/github.png";
-import email from "./images/email.png";
+import emailLogo from "./images/email.png";
+import cv from "./images/cv.png";
+import linkedin from "./images/linkedin.png";
 import "../node_modules/font-awesome/css/font-awesome.min.css";
 import Navbar from "./Navbar";
 import ProjectImages from "./ProjectImages";
 
 function Home() {
+  const [firstName, setFirstname] = useState("");
+  const [lastName, setLastname] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
   return (
     <div className="home">
       <section className="header">
@@ -39,16 +45,16 @@ function Home() {
             </h2>
             <div className="links">
               <a href="/">
-                <img src={facebook} alt="facebook" className="icons"></img>
-              </a>
-              <a href="/">
-                <img src={instagram} alt="instagram" className="icons"></img>
+                <img src={linkedin} alt="linkedin" className="icons"></img>
               </a>
               <a href="/">
                 <img src={github} alt="github" className="icons"></img>
               </a>
               <a href="/">
-                <img src={email} alt="email" className="icons"></img>
+                <img src={emailLogo} alt="email" className="icons"></img>
+              </a>
+              <a href="/">
+                <img src={cv} alt="resume" className="icons"></img>
               </a>
             </div>
           </div>
@@ -220,8 +226,25 @@ function Home() {
               <ProjectImages></ProjectImages>
             </div>
             <div className="projectDescription">
-              <h2> Cribbage Game </h2>
-              <h3> Rrrrr</h3>
+              <a href="/">
+                <h2> Cribbage Game </h2>
+              </a>
+              Tools & Concepts: Java, JCardGame, UML, Gang of Four Design
+              Pattern, Software Architecture
+              <ul>
+                <li>
+                  Created the scoring system (play, show) for a two player
+                  (player, dealer) Cribbage game.
+                </li>
+                <li>
+                  Created design models for the Cribbage game using UML
+                  notation.
+                </li>
+                <li>
+                  Used design patterns including Strategy, Composite, Factory,
+                  and Singleton patterns
+                </li>
+              </ul>
             </div>
           </div>
 
@@ -230,13 +253,25 @@ function Home() {
               <ProjectImages></ProjectImages>
             </div>
             <div className="projectDescription">
-              <h2> Flappy Bird Game </h2>
-              <h3> Rrrrr</h3>
+              <a>
+                <h2> Flappy Bird Game </h2>
+              </a>
+              Tools & Concepts: Python, PyCharm, Pygame
+              <ul>
+                <li>
+                  Built a full functioning game of Flappy Bird with
+                  randomization of difficulty
+                </li>
+                <li>
+                  Included customization of bird styles and day/light options
+                </li>
+              </ul>
             </div>
           </div>
 
           <div className="upcomingProjects">
-            <h2> Upcoming Projects </h2>
+            <h1 className="title"> UPCOMING PROJECTS </h1>
+            <div class="line__upcoming__projects"> </div>
             <ul>
               <li> Booking Services Web Application (Node.js, React) </li>
               <li> Shifts Manager Application (Swift)</li>
@@ -246,24 +281,67 @@ function Home() {
       </section>
       <section className="contactMe">
         <h1 className="title"> CONTACT ME </h1>
-        <div class="line__projects"> </div>
+        <div class="line__contactMe"> </div>
         <form>
-          <label> First Name</label>
-          <input type="firstname" name="firstname" value="First Name" />
-          <label> Last Name</label>
-          <input type="lastname" name="lastname" value="Last Name" />
-          <br></br>
+          <div className="nameInput">
+            <div className="nameLabel">
+              <label> First Name</label>
+              <input
+                type="firstname"
+                name="firstname"
+                value=""
+                value={firstName}
+                onChange={(e) => setFirstname(e.target.value)}
+                required="true"
+              />
+            </div>
+            <div className="nameLabel">
+              <label> Last Name</label>
+              <input
+                type="lastname"
+                name="lastname"
+                value=""
+                required="true"
+                value={lastName}
+                onChange={(e) => setLastname(e.target.value)}
+              />
+            </div>
+          </div>
           <label> Email Address </label>
-          <input type="email" name="email" value="Email Address" />
-          <br></br>
-          <label> Message </label>
           <input
+            type="email"
+            name="email"
+            value=""
+            required="true"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <label> Message </label>
+          <textarea
             type="message"
             name="message"
-            value="Enter your message here"
+            id="message"
+            value=""
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            required="true"
           />
-          <input type="submit" value="Submit" />
+          <input type="submit" value="SEND" className="submitBtn" />
         </form>
+        <div className="links2">
+          <a href="/">
+            <img src={linkedin} alt="linkedin" className="icons"></img>
+          </a>
+          <a href="/">
+            <img src={github} alt="github" className="icons"></img>
+          </a>
+          <a href="/">
+            <img src={emailLogo} alt="email" className="icons"></img>
+          </a>
+          <a href="/">
+            <img src={cv} alt="resume" className="icons"></img>
+          </a>
+        </div>
       </section>
     </div>
   );

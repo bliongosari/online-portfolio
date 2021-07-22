@@ -35,6 +35,21 @@
   margin: 0 auto;
 }
 
+.line__contactMe {
+  height: 3.5px;
+  width: 25%;
+  background: #8d99ae;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.line__upcoming__projects {
+  height: 3.5px;
+  width: 25%;
+  background: #f3722c;
+  margin: 0 auto;
+}
+
 .line__aboutme {
   height: 3.5px;
   width: 25%;
@@ -54,7 +69,7 @@
 .line__skills {
   height: 3.5px;
   width: 25%;
-  background: #ee6c4d;
+  background: #d90429;
   margin: 0 auto;
   margin-bottom: 25px;
 }
@@ -242,6 +257,17 @@ ul h1 {
   flex-direction: row;
 }
 
+.links2 {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+}
+
+.links2 :hover {
+  opacity: 0.7;
+}
+
 .links :hover {
   opacity: 0.8;
 }
@@ -342,16 +368,89 @@ ul h1 {
   font-size: 1.5rem;
 }
 
-.proj .contactMe {
-  padding: 8vh 2vh 8vh 2vh;
+.upcomingProjects {
+  margin-top: 50px;
+}
+
+.upcomingProjects ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.upcomingProjects li {
+  display: inline-block;
+  margin: 30px;
+  font-family: sans-serif;
+  font-size: 17px;
+}
+
+.contactMe {
   font-family: Times;
   font-weight: lighter;
   background: white;
   color: #333;
-  padding: 10vh 3vh 10vh 3vh;
+  padding: 10vh 3vh 3vh 3vh;
+}
+
+.contactMe form {
+  font-family: sans-serif;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
+
+.nameInput {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nameLabel {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+form input {
+  margin-bottom: 10px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+  padding: 5px;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+
+.submitBtn {
+  width: 180px;
+  height: 40px;
+  margin: 0 auto;
+  margin-top: 15px;
+  font-family: sans-serif;
+  font-weight: lighter;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: black;
+  background: #dfe7fd;
+  letter-spacing: 0.06em;
+  box-shadow: none;
+}
+
+.submitBtn:hover {
+  background: #cddafd;
+}
+
+#message {
+  height: 190px;
+  word-wrap: break-word;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px;
 }
 
 @media screen and (max-width: 650px) {
-  .education__sidebar {
-  }
 }
