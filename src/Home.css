@@ -7,6 +7,9 @@
   --qualifications: #40916c;
 }
 
+.home {
+  overflow: hidden;
+}
 .title {
   display: flex;
   justify-content: center;
@@ -51,7 +54,7 @@
 .line__skills {
   height: 3.5px;
   width: 25%;
-  background: #3d405b;
+  background: #ee6c4d;
   margin: 0 auto;
   margin-bottom: 25px;
 }
@@ -60,6 +63,14 @@
   height: 3.5px;
   width: 25%;
   background: #99582a;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.line__projects {
+  height: 3.5px;
+  width: 25%;
+  background: #184e77;
   margin: 0 auto;
   margin-bottom: 25px;
 }
@@ -156,6 +167,8 @@ ul h1 {
   justify-content: center;
   margin-left: 5px;
   font-size: 20px;
+  font-family: sans-serif;
+  font-weight: lighter;
 }
 
 .qual__titles {
@@ -251,6 +264,7 @@ ul h1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
   margin: 2vh 0 2vh 0;
 }
 
@@ -261,15 +275,80 @@ ul h1 {
   font-weight: lighter;
   font-family: sans-serif;
   line-height: 24px;
+  width: 60vw;
 }
 
 .education__sidebar {
   width: 40vw;
-  align-items: center;
+  max-width: 40vw;
   justify-content: center;
   display: flex;
   flex: 1;
   flex-direction: column;
+}
+
+.projects {
+  padding: 8vh 2vh 8vh 2vh;
+  font-family: Times;
+  font-weight: lighter;
+  background: #e9ecef;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  padding: 10vh 5vw 10vh 5vw;
+}
+
+.projectContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 2vh;
+  justify-content: center;
+}
+
+.projectTitle {
+  display: flex;
+  background-color: red;
+  min-width: 300px;
+  width: 30vw;
+}
+
+.projectDescription {
+  display: flex;
+  flex-direction: column;
+  background-color: #dee2e6;
+  width: 55vw;
+  color: #212529;
+  font-family: sans-serif;
+  font-weight: lighter;
+  text-align: center;
+  padding: 10px;
+  min-width: 300px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.projectDescription ul {
+  margin-top: 10px;
+}
+.projectDescription li {
+  text-align: start;
+}
+
+.projectDescription h2 {
+  color: #212529;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 1.5rem;
+}
+
+.proj .contactMe {
+  padding: 8vh 2vh 8vh 2vh;
+  font-family: Times;
+  font-weight: lighter;
+  background: white;
+  color: #333;
+  padding: 10vh 3vh 10vh 3vh;
 }
 
 @media screen and (max-width: 650px) {

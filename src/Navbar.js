@@ -4,9 +4,6 @@ import "./Navbar.css";
 function Navbar(props) {
   return (
     <div className="navbar">
-      <div className="navbar__left">
-        <a href>Brandon Vincent</a>
-      </div>
       <div className="navbar__content">
         <a href="/"> Contact Me </a>
         <a href="/"> Qualifications </a>
