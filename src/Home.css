@@ -1,10 +1,8 @@
 * {
   margin: 0;
-}
-
-section {
   scroll-behavior: smooth;
 }
+
 :root {
   --main: #97afa3;
   --qualifications: #40916c;
@@ -104,7 +102,11 @@ section {
   --animate-duration: 1.5s;
 }
 
-.animate__lightSpeedInLeft {
+.animate__animated.animate__bounceInLeft {
+  --animate-duration: 2s;
+}
+
+.animate__animated.animate__lightSpeedInLeft {
   --animate-duration: 2s;
 }
 
@@ -259,7 +261,18 @@ ul h1 {
 .icons {
   width: 32px;
   height: 32px;
-  margin: 20px 0px 0px 0;
+  margin: 20px 5px 0px 5px;
+}
+
+.iconsdown {
+  width: 32px;
+  height: 32px;
+  margin: 20px 5px 0px 5px;
+}
+
+.iconsdown:hover {
+  width: 35px;
+  height: 35px;
 }
 
 .links {
@@ -332,7 +345,6 @@ ul h1 {
   color: #333;
   display: flex;
   position: relative;
-  z-index: -19;
   flex-direction: column;
   padding: 10vh 5vw 10vh 5vw;
 }
@@ -341,6 +353,8 @@ ul h1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
   justify-content: center;
 }
 
@@ -348,11 +362,11 @@ ul h1 {
   display: flex;
   min-width: 300px;
   margin-top: 1vh;
+  position: relative;
+  z-index: 999 !important;
   margin-bottom: 2vh;
   max-height: 350px;
   width: 30vw;
-  position: relative;
-  z-index: -1;
 }
 
 .projectDescription {
@@ -384,6 +398,7 @@ ul h1 {
   font-family: sans-serif;
   font-weight: lighter;
   font-size: 1.5rem;
+  margin-bottom: 7px;
 }
 
 .upcomingProjects {
@@ -474,6 +489,14 @@ form input {
 .header__wrapper {
   text-align: center;
   margin-top: 35vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+.readMore {
+  color: white;
 }
 
 @media screen and (max-width: 650px) {

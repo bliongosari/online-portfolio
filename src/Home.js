@@ -8,7 +8,9 @@ import linkedin from "./images/linkedin.png";
 import down from "./images/down.png";
 import "../node_modules/font-awesome/css/font-awesome.min.css";
 import Navbar from "./Navbar";
+
 import "animate.css/animate.min.css";
+import ScrollAnimation from "react-animate-on-scroll";
 
 import { useSpring, animated } from "react-spring";
 import ImageGallery from "react-image-gallery";
@@ -115,8 +117,7 @@ function Home() {
     // to: { opacity: 1, marginLeft: 0 },
     from: { opacity: 0, scale: 0.9 },
     to: { opacity: 1, scale: 1 },
-    delay: 10,
-    config: { duration: 1000 },
+    config: { duration: 700 },
   });
 
   const downBtnAnimation = useSpring({
@@ -144,15 +145,23 @@ function Home() {
                 Web Developer/Software Engineer/Data Analyst{" "}
               </h2>
             </div>
-            <button className="readMore"> READ MORE </button>
+            <button className="readMore">
+              {" "}
+              <a href="#aboutMe" className="readMore">
+                READ MORE{" "}
+              </a>
+            </button>
             <animated.div style={downBtnAnimation}>
-              <img src={down} alt="downbtn" className="icons"></img>
+              <a href="#aboutMe">
+                <img src={down} alt="downbtn" className="iconsdown"></img>
+              </a>
             </animated.div>
           </div>
         </animated.div>
       </section>
+
       <section className="aboutMe" id="aboutMe">
-        <div className="animate__animated animate__lightSpeedInLeft">
+        <ScrollAnimation animateIn="bounceInLeft">
           <h1 className="title"> ABOUT ME</h1>
           <div class="line__aboutme"> </div>
           <div className="about__content">
@@ -167,72 +176,75 @@ function Home() {
                 (Internship/Part-time/Casual/Full-Time/Graduate).
               </h2>
               <div className="links">
-                <a href="/">
+                <a href="https://www.linkedin.com/in/brandon-vincent-liongosari-323475153/">
                   <img src={linkedin} alt="linkedin" className="icons"></img>
                 </a>
-                <a href="/">
+                <a href="https://github.com/bliongosari">
                   <img src={github} alt="github" className="icons"></img>
                 </a>
-                <a href="/">
+                <a href="mailto:bradonvincent567@gmail.com">
                   <img src={emailLogo} alt="email" className="icons"></img>
                 </a>
                 <a href="/">
                   <img src={cv} alt="resume" className="icons"></img>
                 </a>
               </div>
-            </div>
 
-            {/* logos */}
+              {/* logos */}
 
-            <div className="hobbies">
-              <h1 className="hobbies_title"> PERSONAL INTERESTS</h1>
-              <div class="line__interest"> </div>
-              <h2>
-                When I am not programming, I tend to spend my time on sports
-                like fitness, basketball, tennis, e-sports, and chess. I love
-                watching interesting videos, documentaries, movies, and all
-                kinds of TV Shows. I have dreams of travelling the world and
-                experiencing all kinds of culture around the world.
-              </h2>
-              <a href="https://vsco.co/brandonvincent1/gallery">
-                {" "}
-                <h2>View my picture gallery here </h2>
-              </a>
+              <div className="hobbies">
+                <h1 className="hobbies_title"> PERSONAL INTERESTS</h1>
+                <div class="line__interest"> </div>
+                <h2>
+                  When I am not programming, I tend to spend my time on sports
+                  like fitness, basketball, tennis, e-sports, and chess. I love
+                  watching interesting videos, documentaries, movies, and all
+                  kinds of TV Shows. I have dreams of travelling the world and
+                  experiencing all kinds of culture around the world.
+                </h2>
+                <a href="https://vsco.co/brandonvincent1/gallery">
+                  {" "}
+                  <h2>View my picture gallery here </h2>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
+        </ScrollAnimation>
       </section>
+
       <section className="qualifications" id="qualifications">
-        <h1 className="title"> TECHNICAL SKILLS</h1>
-        <div class="line__skills"> </div>
-        <div className="qualifications__content">
-          <ul className="qual__titles">
-            <h1> PROGRAMMING LANGUAGES</h1>
-          </ul>
-          <ul className="prog__languages">
-            <li>Java</li>
-            <li>Javascript</li>
-            <li>Python</li>
-            <li>C Programming</li>
-            <li>Haskell</li>
-            <li> HTML and CSS</li>
-            <li> SQL </li>
-          </ul>
-          <ul className="qual__titles">
-            <h1> TOOLS AND TECHNOLOGIES</h1>
-          </ul>
-          <ul className="tools__techs">
-            <li> Git and Github</li>
-            <li> JupyterLab </li>
-            <li> Visual Studio Code</li>
-            <li> Node.js </li>
-            <li> React.js </li>
-            <li> Redux </li>
-            <li> MongoDB </li>
-            <li> MySQL</li>
-            <li> </li>
-          </ul>
-        </div>
+        <ScrollAnimation animateIn="bounceInLeft">
+          <h1 className="title"> TECHNICAL SKILLS</h1>
+          <div class="line__skills"> </div>
+          <div className="qualifications__content">
+            <ul className="qual__titles">
+              <h1> PROGRAMMING LANGUAGES</h1>
+            </ul>
+            <ul className="prog__languages">
+              <li>Java</li>
+              <li>Javascript</li>
+              <li>Python</li>
+              <li>C Programming</li>
+              <li>Haskell</li>
+              <li> HTML and CSS</li>
+              <li> SQL </li>
+            </ul>
+            <ul className="qual__titles">
+              <h1> TOOLS AND TECHNOLOGIES</h1>
+            </ul>
+            <ul className="tools__techs">
+              <li> Git and Github</li>
+              <li> JupyterLab </li>
+              <li> Visual Studio Code</li>
+              <li> Node.js </li>
+              <li> React.js </li>
+              <li> Redux </li>
+              <li> MongoDB </li>
+              <li> MySQL</li>
+              <li> </li>
+            </ul>
+          </div>
+        </ScrollAnimation>
       </section>
       <section className="education">
         <h1 className="title"> EDUCATION </h1>
@@ -486,13 +498,13 @@ function Home() {
           <input type="submit" value="SEND" className="submitBtn" />
         </form>
         <div className="links2">
-          <a href="/">
+          <a href="https://www.linkedin.com/in/brandon-vincent-liongosari-323475153/">
             <img src={linkedin} alt="linkedin" className="icons"></img>
           </a>
-          <a href="/">
+          <a href="https://github.com/bliongosari">
             <img src={github} alt="github" className="icons"></img>
           </a>
-          <a href="/">
+          <a href="mailto:bradonvincent567@gmail.com">
             <img src={emailLogo} alt="email" className="icons"></img>
           </a>
           <a href="/">

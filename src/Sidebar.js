@@ -3,25 +3,24 @@ import React from "react";
 import "./Sidebar.css";
 
 class Sidebar extends React.Component {
-  showSettings(event) {
-    event.preventDefault();
-  }
-
   render() {
     // NOTE: You also need to provide styles, see https://github.com/negomi/react-burger-menu#styling
     return (
       <Menu right>
-        <a id="home" className="menu-item" href="/">
+        <a className="menu-item" href="#">
           Home
         </a>
-        <a id="about" className="menu-item" href="/about">
-          About
+        <a className="menu-item" href="#aboutMe">
+          About Me
         </a>
-        <a id="contact" className="menu-item" href="/contact">
-          Contact
+        <a className="menu-item" href="#aboutMe">
+          Qualifications
         </a>
-        <a onClick={this.showSettings} className="menu-item--small" href="">
-          Settings
+        <a className="menu-item" href="#projects">
+          Projects
+        </a>
+        <a className="menu-item" href="#contactMe">
+          Contact Me
         </a>
       </Menu>
     );
