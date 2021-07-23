@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import profilePicture from "./images/background.png";
 import github from "./images/github.png";
@@ -8,6 +8,7 @@ import linkedin from "./images/linkedin.png";
 import down from "./images/down.png";
 import "../node_modules/font-awesome/css/font-awesome.min.css";
 import Navbar from "./Navbar";
+import emailjs from "emailjs-com";
 
 import "animate.css/animate.min.css";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -43,6 +44,35 @@ function Home() {
   const [lastName, setLastname] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [successMsg, setSuccess] = useState("");
+
+  const deleteMsg = () => {
+    setTimeout(() => {
+      setSuccess("");
+    }, 7000);
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_j2dvgyu",
+        "template_wep7tu8",
+        e.target,
+        "user_d2BXod1EVap0BhkpNZ7il"
+      )
+      .then((response) => {
+        setSuccess("Successfully Sent");
+        setFirstname("");
+        setLastname("");
+        setEmail("");
+        setMessage("");
+        deleteMsg();
+      })
+      .catch((err) => {
+        console.log("FAILED...", err);
+      });
+  };
 
   const project1 = [
     {
@@ -419,7 +449,7 @@ function Home() {
               />
             </div>
             <div className="projectDescription">
-              <a>
+              <a href="/">
                 <h2> Flappy Bird Game </h2>
               </a>
               Tools & Concepts: Python, PyCharm, Pygame
@@ -448,14 +478,13 @@ function Home() {
       <section className="contactMe" id="contactMe">
         <h1 className="title"> CONTACT ME </h1>
         <div class="line__contactMe"> </div>
-        <form>
+        <form onSubmit={sendEmail}>
           <div className="nameInput">
             <div className="nameLabel">
               <label> First Name</label>
               <input
                 type="firstname"
                 name="firstname"
-                value=""
                 value={firstName}
                 onChange={(e) => setFirstname(e.target.value)}
                 required="true"
@@ -466,7 +495,6 @@ function Home() {
               <input
                 type="lastname"
                 name="lastname"
-                value=""
                 required="true"
                 value={lastName}
                 onChange={(e) => setLastname(e.target.value)}
@@ -477,7 +505,6 @@ function Home() {
           <input
             type="email"
             name="email"
-            value=""
             required="true"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -487,12 +514,12 @@ function Home() {
             type="message"
             name="message"
             id="message"
-            value=""
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required="true"
           />
           <input type="submit" value="SEND" className="submitBtn" />
+          <h2 class="formMsg"> {successMsg}</h2>
         </form>
         <div className="links2">
           <a href="https://www.linkedin.com/in/brandon-vincent-liongosari-323475153/">
