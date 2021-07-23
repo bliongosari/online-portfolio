@@ -123,7 +123,7 @@
 
 .header {
   background: url(images/background-hi1.jpg) top;
-  /* background-size: cover; */
+  background-size: cover;
   background-attachment: fixed;
   position: relative;
   z-index: 0;
@@ -510,8 +510,9 @@ a {
   color: green;
 }
 
-@media all and (max-width: 700px) {
-  * {
-    --animate-duration: 0s;
+@media all and (max-width: 600px) {
+  .header {
+    background: url(images/background-iphone.jpg) top;
+    background-size: cover;
   }
 }

@@ -425,7 +425,7 @@ function Home() {
                   (player, dealer) Cribbage game.
                 </li>
                 <li>
-                  Created design models for the Cribbage game using UML
+                  Designed design models for the Cribbage game using UML
                   notation.
                 </li>
                 <li>
