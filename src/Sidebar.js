@@ -7,7 +7,7 @@ class Sidebar extends React.Component {
     // NOTE: You also need to provide styles, see https://github.com/negomi/react-burger-menu#styling
     return (
       <Menu right>
-        <a className="menu-item" href="#">
+        <a className="menu-item" href="/">
           Home
         </a>
         <a className="menu-item" href="#aboutMe">

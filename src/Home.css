@@ -180,6 +180,7 @@
   padding: 10px;
   list-style-type: none;
   display: flex;
+
   flex-direction: column;
 }
 
@@ -189,6 +190,7 @@ ul h1 {
   align-items: center;
   margin-bottom: 20px;
   font-weight: lighter;
+  font-family: sans-serif;
 }
 
 .qualifications li {
@@ -467,13 +469,13 @@ form input {
   border: 1px solid black;
   border-radius: 5px;
   color: black;
-  background: #dfe7fd;
+  background: #e5e5e5;
   letter-spacing: 0.06em;
   box-shadow: none;
 }
 
 .submitBtn:hover {
-  background: #cddafd;
+  background: #ced4da;
 }
 
 #message {

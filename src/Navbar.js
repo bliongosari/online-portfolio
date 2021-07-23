@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import Sidebar from "./Sidebar";
-import { Link } from "react-router-dom";
+
 function Navbar(props) {
   return (
     <div className="navbar">

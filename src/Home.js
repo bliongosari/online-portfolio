@@ -109,9 +109,6 @@ function Home() {
       original: project4_image3,
     },
   ];
-
-  const config = { mass: 5, tension: 2000, friction: 200 };
-  const [flip, set] = useState(false);
   const props = useSpring({
     // from: { opacity: 0, marginLeft: -2000 },
     // to: { opacity: 1, marginLeft: 0 },
