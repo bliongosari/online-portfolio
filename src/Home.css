@@ -100,6 +100,14 @@ section {
   margin-bottom: 11px;
 }
 
+.animate__animated.animate__bounce {
+  --animate-duration: 1.5s;
+}
+
+.animate__lightSpeedInLeft {
+  --animate-duration: 2s;
+}
+
 .description {
   font-size: 1.5em;
   margin-top: 8px;
@@ -461,6 +469,11 @@ form input {
   font-size: 16px;
   line-height: 20px;
   padding: 10px;
+}
+
+.header__wrapper {
+  text-align: center;
+  margin-top: 35vh;
 }
 
 @media screen and (max-width: 650px) {

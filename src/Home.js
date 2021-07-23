@@ -5,10 +5,12 @@ import github from "./images/github.png";
 import emailLogo from "./images/email.png";
 import cv from "./images/cv.png";
 import linkedin from "./images/linkedin.png";
+import down from "./images/down.png";
 import "../node_modules/font-awesome/css/font-awesome.min.css";
 import Navbar from "./Navbar";
-import ProjectImages from "./ProjectImages";
+import "animate.css/animate.min.css";
 
+import { useSpring, animated } from "react-spring";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 
@@ -106,65 +108,97 @@ function Home() {
     },
   ];
 
+  const config = { mass: 5, tension: 2000, friction: 200 };
+  const [flip, set] = useState(false);
+  const props = useSpring({
+    // from: { opacity: 0, marginLeft: -2000 },
+    // to: { opacity: 1, marginLeft: 0 },
+    from: { opacity: 0, scale: 0.9 },
+    to: { opacity: 1, scale: 1 },
+    delay: 10,
+    config: { duration: 1000 },
+  });
+
+  const downBtnAnimation = useSpring({
+    // from: { opacity: 0, marginLeft: -2000 },
+    // to: { opacity: 1, marginLeft: 0 },
+    from: { marginTop: "0px" },
+    to: { marginTop: "35px" },
+    loop: true,
+    config: { duration: 1500, velocity: 10, mass: 20 },
+  });
+
   return (
     <div className="home">
       <section className="header">
-        <Navbar></Navbar>
-        <div className="containerPic">
+        <animated.div style={props}>
+          <Navbar></Navbar>
+          {/* <div className="containerPic">
           <img className="mypic" src={profilePicture} alt="pic"></img>
-        </div>
-        <h1 className="name"> BRANDON VINCENT </h1>
-        <div className="line_title"></div>
-        <h2 className="description">
-          Web Developer/Software Engineer/Data Analyst{" "}
-        </h2>
-        <button className="readMore"> READ MORE </button>
+        </div> */}
+          <div className="header__wrapper">
+            <div className="animate__animated animate__bounceInLeft">
+              <h1 className="name"> BRANDON VINCENT </h1>
+              <div className="line_title"></div>
+              <h2 className="description">
+                Web Developer/Software Engineer/Data Analyst{" "}
+              </h2>
+            </div>
+            <button className="readMore"> READ MORE </button>
+            <animated.div style={downBtnAnimation}>
+              <img src={down} alt="downbtn" className="icons"></img>
+            </animated.div>
+          </div>
+        </animated.div>
       </section>
       <section className="aboutMe" id="aboutMe">
-        <h1 className="title"> ABOUT ME</h1>
-        <div class="line__aboutme"> </div>
-        <div className="about__content">
-          <div className="intro">
-            <h2>
-              Hi! My name is Brandon. I am a Software Engineer/Web
-              Developer/Data Analyst. I am extremely detailed, logical, and keen
-              in learning/adapting to new frameworks. I aim to always exceed
-              client's expectations and create the best quality of work.
-              Currently in my third year of my Computer Science degree, and open
-              to any job opportunities
-              (Internship/Part-time/Casual/Full-Time/Graduate).
-            </h2>
-            <div className="links">
-              <a href="/">
-                <img src={linkedin} alt="linkedin" className="icons"></img>
-              </a>
-              <a href="/">
-                <img src={github} alt="github" className="icons"></img>
-              </a>
-              <a href="/">
-                <img src={emailLogo} alt="email" className="icons"></img>
-              </a>
-              <a href="/">
-                <img src={cv} alt="resume" className="icons"></img>
+        <div className="animate__animated animate__lightSpeedInLeft">
+          <h1 className="title"> ABOUT ME</h1>
+          <div class="line__aboutme"> </div>
+          <div className="about__content">
+            <div className="intro">
+              <h2>
+                Hi! My name is Brandon. I am a Software Engineer/Web
+                Developer/Data Analyst. I am extremely detailed, logical, and
+                keen in learning/adapting to new frameworks. I aim to always
+                exceed client's expectations and create the best quality of
+                work. Currently in my third year of my Computer Science degree,
+                and open to any job opportunities
+                (Internship/Part-time/Casual/Full-Time/Graduate).
+              </h2>
+              <div className="links">
+                <a href="/">
+                  <img src={linkedin} alt="linkedin" className="icons"></img>
+                </a>
+                <a href="/">
+                  <img src={github} alt="github" className="icons"></img>
+                </a>
+                <a href="/">
+                  <img src={emailLogo} alt="email" className="icons"></img>
+                </a>
+                <a href="/">
+                  <img src={cv} alt="resume" className="icons"></img>
+                </a>
+              </div>
+            </div>
+
+            {/* logos */}
+
+            <div className="hobbies">
+              <h1 className="hobbies_title"> PERSONAL INTERESTS</h1>
+              <div class="line__interest"> </div>
+              <h2>
+                When I am not programming, I tend to spend my time on sports
+                like fitness, basketball, tennis, e-sports, and chess. I love
+                watching interesting videos, documentaries, movies, and all
+                kinds of TV Shows. I have dreams of travelling the world and
+                experiencing all kinds of culture around the world.
+              </h2>
+              <a href="https://vsco.co/brandonvincent1/gallery">
+                {" "}
+                <h2>View my picture gallery here </h2>
               </a>
             </div>
-          </div>
-          {/* logos */}
-
-          <div className="hobbies">
-            <h1 className="hobbies_title"> PERSONAL INTERESTS</h1>
-            <div class="line__interest"> </div>
-            <h2>
-              When I am not programming, I tend to spend my time on sports like
-              fitness, basketball, tennis, e-sports, and chess. I love watching
-              interesting videos, documentaries, movies, and all kinds of TV
-              Shows. I have dreams of travelling the world and experiencing all
-              kinds of culture around the world.
-            </h2>
-            <a href="/">
-              {" "}
-              <h2>View my picture gallery here </h2>
-            </a>
           </div>
         </div>
       </section>
