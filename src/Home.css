@@ -2,6 +2,9 @@
   margin: 0;
 }
 
+section {
+  scroll-behavior: smooth;
+}
 :root {
   --main: #97afa3;
   --qualifications: #40916c;
@@ -320,6 +323,8 @@ ul h1 {
   background: #e9ecef;
   color: #333;
   display: flex;
+  position: relative;
+  z-index: -19;
   flex-direction: column;
   padding: 10vh 5vw 10vh 5vw;
 }
@@ -328,18 +333,23 @@ ul h1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-bottom: 2vh;
   justify-content: center;
 }
 
 .projectTitle {
   display: flex;
-  background-color: red;
   min-width: 300px;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+  max-height: 350px;
   width: 30vw;
+  position: relative;
+  z-index: -1;
 }
 
 .projectDescription {
+  margin-top: 1vh;
+  margin-bottom: 2vh;
   display: flex;
   flex-direction: column;
   background-color: #dee2e6;
@@ -369,6 +379,7 @@ ul h1 {
 }
 
 .upcomingProjects {
+  text-align: center;
   margin-top: 50px;
 }
 
@@ -398,7 +409,7 @@ ul h1 {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  width: 50vw;
+  width: 55vw;
 }
 
 .nameInput {

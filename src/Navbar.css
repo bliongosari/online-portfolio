@@ -4,8 +4,7 @@
 
 .navbar {
   overflow: hidden;
-  padding: 10px 5px;
-  /* z-index: 100; */
+  padding: 0px 5px;
 }
 
 a {
@@ -16,6 +15,7 @@ a {
   text-decoration: none;
   float: left;
   text-align: center;
+  margin-top: 10px;
   font-size: 25px;
   font-weight: lighter;
 }
@@ -32,4 +32,10 @@ a {
 
 .navbar__content a:hover {
   font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+  .navbar__content {
+    display: none;
+  }
 }

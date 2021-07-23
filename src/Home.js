@@ -9,11 +9,102 @@ import "../node_modules/font-awesome/css/font-awesome.min.css";
 import Navbar from "./Navbar";
 import ProjectImages from "./ProjectImages";
 
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
+
+import project1_image1 from "./images/project1/1.png";
+import project1_image2 from "./images/project1/2.png";
+import project1_image3 from "./images/project1/3.png";
+import project1_image4 from "./images/project1/4.png";
+import project1_image5 from "./images/project1/5.png";
+import project1_image6 from "./images/project1/6.png";
+import project1_image7 from "./images/project1/7.png";
+import project1_image8 from "./images/project1/8.png";
+import project1_image9 from "./images/project1/9.png";
+
+import project2_image1 from "./images/project2/1.png";
+import project2_image2 from "./images/project2/2.png";
+import project2_image3 from "./images/project2/3.png";
+import project2_image4 from "./images/project2/4.png";
+
+import project3_image1 from "./images/project3/1.png";
+import project3_image2 from "./images/project3/2.png";
+
+import project4_image1 from "./images/project4/1.png";
+import project4_image2 from "./images/project4/2.png";
+import project4_image3 from "./images/project4/3.png";
+
 function Home() {
   const [firstName, setFirstname] = useState("");
   const [lastName, setLastname] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
+  const project1 = [
+    {
+      original: project1_image1,
+    },
+    {
+      original: project1_image2,
+    },
+    {
+      original: project1_image3,
+    },
+    {
+      original: project1_image4,
+    },
+    {
+      original: project1_image5,
+    },
+    {
+      original: project1_image6,
+    },
+    {
+      original: project1_image7,
+    },
+    {
+      original: project1_image8,
+    },
+    {
+      original: project1_image9,
+    },
+  ];
+
+  const project2 = [
+    {
+      original: project2_image1,
+    },
+    {
+      original: project2_image2,
+    },
+    {
+      original: project2_image3,
+    },
+    {
+      original: project2_image4,
+    },
+  ];
+
+  const project3 = [
+    {
+      original: project3_image1,
+    },
+    {
+      original: project3_image2,
+    },
+  ];
+
+  const project4 = [
+    {
+      original: project4_image1,
+    },
+    {
+      original: project4_image2,
+    },
+    {
+      original: project4_image3,
+    },
+  ];
 
   return (
     <div className="home">
@@ -29,7 +120,7 @@ function Home() {
         </h2>
         <button className="readMore"> READ MORE </button>
       </section>
-      <section className="aboutMe">
+      <section className="aboutMe" id="aboutMe">
         <h1 className="title"> ABOUT ME</h1>
         <div class="line__aboutme"> </div>
         <div className="about__content">
@@ -77,7 +168,7 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="qualifications">
+      <section className="qualifications" id="qualifications">
         <h1 className="title"> TECHNICAL SKILLS</h1>
         <div class="line__skills"> </div>
         <div className="qualifications__content">
@@ -159,13 +250,21 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="projects">
+      <section className="projects" id="projects">
         <h1 className="title"> PROJECTS </h1>
         <div class="line__projects"> </div>
         <div className="projectContent">
           <div className="projectContainer">
             <div className="projectTitle">
-              <ProjectImages></ProjectImages>
+              <ImageGallery
+                items={project1}
+                defaultImage={project1[0].original}
+                showBullets={true}
+                showIndex={true}
+                showThumbnails={false}
+                lazyLoad={true}
+                showPlayButton={false}
+              />
             </div>
             <div className="projectDescription">
               <a href="http://snacks-in-a-van-chicken.herokuapp.com">
@@ -193,7 +292,15 @@ function Home() {
           </div>
           <div className="projectContainer">
             <div className="projectTitle">
-              <ProjectImages></ProjectImages>
+              <ImageGallery
+                items={project2}
+                defaultImage={project2[0].original}
+                showBullets={true}
+                showIndex={true}
+                showThumbnails={false}
+                lazyLoad={true}
+                showPlayButton={false}
+              />
             </div>
             <div className="projectDescription">
               <a href="/">
@@ -223,7 +330,15 @@ function Home() {
 
           <div className="projectContainer">
             <div className="projectTitle">
-              <ProjectImages></ProjectImages>
+              <ImageGallery
+                items={project3}
+                defaultImage={project3[0].original}
+                showBullets={true}
+                showIndex={true}
+                showThumbnails={false}
+                lazyLoad={true}
+                showPlayButton={false}
+              />
             </div>
             <div className="projectDescription">
               <a href="/">
@@ -250,7 +365,15 @@ function Home() {
 
           <div className="projectContainer">
             <div className="projectTitle">
-              <ProjectImages></ProjectImages>
+              <ImageGallery
+                items={project4}
+                defaultImage={project4[0].original}
+                showBullets={true}
+                showIndex={true}
+                showThumbnails={false}
+                lazyLoad={true}
+                showPlayButton={false}
+              />
             </div>
             <div className="projectDescription">
               <a>
@@ -273,13 +396,13 @@ function Home() {
             <h1 className="title"> UPCOMING PROJECTS </h1>
             <div class="line__upcoming__projects"> </div>
             <ul>
-              <li> Booking Services Web Application (Node.js, React) </li>
+              <li> Booking Services Web Application (MERN Stack) </li>
               <li> Shifts Manager Application (Swift)</li>
             </ul>
           </div>
         </div>
       </section>
-      <section className="contactMe">
+      <section className="contactMe" id="contactMe">
         <h1 className="title"> CONTACT ME </h1>
         <div class="line__contactMe"> </div>
         <form>

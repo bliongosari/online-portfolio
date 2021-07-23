@@ -2,7 +2,7 @@ import React from "react";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 
-function ProjectImages(props) {
+function ProjectImages() {
   const images = [
     {
       original: "http://lorempixel.com/1000/600/nature/1/",
