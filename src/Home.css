@@ -10,6 +10,7 @@
 
 .home {
   overflow: hidden;
+  margin: 0;
 }
 .title {
   display: flex;
@@ -56,7 +57,7 @@
   width: 25%;
   background: #a98467;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 
 .line__interest {
@@ -205,8 +206,8 @@ ul h1 {
   text-align: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  font-weight: lighter;
   font-size: 19px;
+  font-weight: bold;
 }
 
 .aboutMe {
@@ -510,9 +511,49 @@ a {
   color: green;
 }
 
+.profile {
+  width: 230px;
+  margin-right: 20px;
+  flex: 1;
+}
+
+.intro__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.intro__wrapper h2 {
+  margin-right: 50px;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.text2 {
+  margin-top: 20px;
+}
+
 @media all and (max-width: 600px) {
   .header {
     background: url(images/background-iphone.jpg) top;
     background-size: cover;
+  }
+  .profile {
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+  .intro__wrapper h2 {
+    margin-right: 0px;
+  }
+
+  .text {
+    margin-right: 0px;
   }
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Home.css";
-import profilePicture from "./images/background.png";
+
 import github from "./images/github.png";
 import emailLogo from "./images/email.png";
 import cv from "./images/cv.png";
@@ -9,6 +9,7 @@ import down from "./images/down.png";
 import "../node_modules/font-awesome/css/font-awesome.min.css";
 import Navbar from "./Navbar";
 import emailjs from "emailjs-com";
+import profilePicture from "./images/background.png";
 
 import "animate.css/animate.min.css";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -169,7 +170,7 @@ function Home() {
               <h1 className="name"> BRANDON VINCENT </h1>
               <div className="line_title"></div>
               <h2 className="description">
-                Web Developer/Software Engineer/Data Analyst{" "}
+                Web Developer - Software Engineer -Data Analyst{" "}
               </h2>
             </div>
             <button className="readMore">
@@ -193,15 +194,31 @@ function Home() {
           <div class="line__aboutme"> </div>
           <div className="about__content">
             <div className="intro">
-              <h2>
-                Hi! My name is Brandon. I am a Software Engineer/Web
-                Developer/Data Analyst. I am extremely detailed, logical, and
-                keen in learning/adapting to new frameworks. I aim to always
-                exceed client's expectations and create the best quality of
-                work. Currently in my third year of my Computer Science degree,
-                and open to any job opportunities
-                (Internship/Part-time/Casual/Full-Time/Graduate).
-              </h2>
+              <div className="intro__wrapper">
+                <img
+                  src={profilePicture}
+                  alt="profile"
+                  className="profile"
+                ></img>{" "}
+                <div className="text">
+                  <h2>
+                    Hi! My name is Brandon. Born in Indonesia, I aspire to be a
+                    am a Software Engineer/Web Developer/Data Analyst. I have
+                    skills in many frameworks and programming languages which
+                    can be seen below. I am extremely detailed, logical, and
+                    keen in learning/adapting to new frameworks. I aim to always
+                    exceed client's expectations and create the best quality of
+                    work. One of my goals of my career is to create a
+                    platform/technology/service that successfully eases the way
+                    humans live.
+                  </h2>
+                  <h2 className="text2">
+                    I am currently in my third year of my Computer Science
+                    degree. I am open for any job opportunities
+                    (Internship/Part-time/Casual/Full-Time/Graduate).
+                  </h2>
+                </div>
+              </div>
               <div className="links">
                 <a href="https://www.linkedin.com/in/brandon-vincent-liongosari-323475153/">
                   <img src={linkedin} alt="linkedin" className="icons"></img>
@@ -216,7 +233,6 @@ function Home() {
                   <img src={cv} alt="resume" className="icons"></img>
                 </a>
               </div>
-
               {/* logos */}
 
               <div className="hobbies">
