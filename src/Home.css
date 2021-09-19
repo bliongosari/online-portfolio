@@ -99,6 +99,10 @@
   margin-bottom: 11px;
 }
 
+.name h1 {
+  font-family: Trade 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
 .animate__animated.animate__bounce {
   --animate-duration: 1.5s;
 }
